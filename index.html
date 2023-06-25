@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="" utf-8 />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <main id="app">
+      <div>
+        <h1>{{message}}</h1>
+      </div>
+      <form id="form" @submit.prevent="newList">
+        <h4>TO DO LIST</h4>
+        <input id="newList" type="text" name="todoText" />
+        <button type="submit" name="newList">Add</button>
+      </form>
+      <div id="addedLists">
+        <div>ToDos</div>
+        <button
+          id="modifyList"
+          type="button"
+          name="modifyList"
+          @click.prevent="modifyList"
+        >
+          Modify
+        </button>
+
+        <button
+          id="deleteList"
+          type="button"
+          name="delete"
+          @click.prevent="List"
+        >
+          Delete
+        </button>
+      </div>
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
